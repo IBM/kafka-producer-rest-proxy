@@ -1,0 +1,196 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "userId",
+    "sessionId",
+    "eventId",
+    "eventTime",
+    "attributes",
+    "name",
+    "platform",
+    "appVersion",
+    "productId",
+    "schemaVersion"
+  ],
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "sessionId": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+    },
+    "eventId": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+    },
+    "eventTime": {
+      "type": "integer"
+    },
+    "sessionStartTime": {
+          "type": "integer"
+        },
+    "customDimensions": {
+        "type": [
+          "null",
+          "object"
+        ]
+    },
+    "attributes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pushToken": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "maxLength": 1024
+        },
+        "pushAuthorization": {
+          "type": "string",
+          "enum": [
+            "denied",
+            "provisional",
+            "notDetermined",
+            "authorized"
+          ]
+        },
+        "devicePlatform": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "deviceCountry": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "maxLength": 64
+        },
+        "deviceLanguage": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "thirdPartyId": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "premium": {
+          "type": "boolean"
+        },
+        "upsId": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "deviceModel": {
+          "type": "string",
+          "maxLength": 256
+        },
+        "installDate": {
+          "type": "integer"
+        },
+        "versionInstallDate": {
+          "type": "integer"
+        },
+        "deviceTimeZone": {
+          "type": "integer"
+        },
+        "experiment": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "maxLength": 128
+        },
+        "variant": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "maxLength": 128
+        },
+        "personalizedAds": {
+          "type": "boolean"
+        },
+        "devUser": {
+          "type": "boolean"
+        },
+        "attributionStatus": {
+          "type": "string",
+          "maxLength": 32
+        },
+        "osVersion": {
+          "type": "string",
+          "maxLength": 32
+        },
+        "attributionCampaign": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "maxLength": 64
+        },
+        "attributionMediaSource": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "maxLength": 64
+        },
+        "premiumExpirationDate": {
+          "type": [
+            "null",
+            "integer"
+          ]
+        },
+        "premiumStartDate": {
+          "type": [
+            "null",
+            "integer"
+          ]
+        },
+        "premiumProductId": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "maxLength": 128
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "enum": [
+        "user-attributes"
+      ]
+    },
+    "productId": {
+      "type": "string",
+      "enum": [
+        "bc479db5-ff58-4138-b5e4-a8400a1f78d5",
+        "7900f30b-8f47-4829-95c5-9d4d6e8564ee",
+        "1080dd4e-8fdc-4e39-b6b5-06d880c5b311"
+      ]
+    },
+    "appVersion": {
+      "type": "string",
+      "maxLength": 32
+    },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "ios",
+        "android"
+      ],
+      "maxLength": 32
+    },
+    "schemaVersion": {
+      "type": "string",
+      "enum": [
+        "1.0"
+      ]
+    }
+  }
+}
+

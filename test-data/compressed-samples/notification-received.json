@@ -1,0 +1,22 @@
+  {
+    "events": [
+      {
+        "sessionId": null,
+        "platform": "ios",
+        "eventId": "81529193-DD4A-4242-9348-40DD3E027990",
+        "userId": "6696E64D-EDB4-4CA0-AD37-AE8E18BDCBA2",
+        "appVersion": "12.10",
+        "eventTime": 1635342907196,
+        "schemaVersion": "4.0",
+        "attributes": {
+          "body": "Rain will begin around 4:16 AM, continuing over next few hours. The rain will be light. See what's coming.",
+          "system": "twc",
+          "notificationType": "push",
+          "twcAlertType": "real time rain",
+          "title": "Rain Alert"
+        },
+        "name": "notification-received",
+        "productId": "7900f30b-8f47-4829-95c5-9d4d6e8564ee"
+      }
+    ]
+  }

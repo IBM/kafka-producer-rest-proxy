@@ -1,0 +1,151 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "userId",
+    "sessionId",
+    "eventId",
+    "eventTime",
+    "attributes",
+    "name",
+    "platform",
+    "appVersion",
+    "productId",
+    "schemaVersion"
+  ],
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "sessionId": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+    },
+    "eventId": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+    },
+    "eventTime": {
+      "type": "integer"
+    },
+    "attributes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "adClicked",
+        "source",
+        "adSecs",
+        "autoplayClicked",
+        "title",
+        "watchedSecs",
+        "playlist",
+        "pos",
+        "teaserTitle",
+        "contentSecs",
+        "adWatchedSecs",
+        "playMethod",
+        "autoPlaySecs",
+        "videoExitReason",
+        "id"
+      ],
+      "properties": {
+        "adClicked": {
+          "type": "boolean"
+        },
+        "source": {
+          "type": "string"
+        },
+        "adSecs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "autoplayClicked": {
+          "type": "boolean"
+        },
+        "title": {
+          "type": "string"
+        },
+        "watchedSecs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "playlist": {
+          "type": "string"
+        },
+        "pos": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "teaserTitle": {
+          "type": "string"
+        },
+        "contentSecs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "adWatchedSecs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "playMethod": {
+          "type": "string",
+          "enum": [
+            "",
+            "user",
+            "auto",
+            "next-video-auto"
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "autoPlaySecs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "videoExitReason": {
+          "type": "string",
+          "enum": [
+            "user exited",
+            "video completed",
+            "error encountered",
+            "user exited during ad",
+            "user clicked another video"
+          ]
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "enum": [
+        "video-played"
+      ]
+    },
+    "productId": {
+      "type": "string",
+      "enum": [
+        "bc479db5-ff58-4138-b5e4-a8400a1f78d5",
+        "7900f30b-8f47-4829-95c5-9d4d6e8564ee",
+        "1080dd4e-8fdc-4e39-b6b5-06d880c5b311"
+      ]
+    },
+    "appVersion": {
+      "type": "string",
+      "maxLength": 32
+    },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "ios",
+        "android"
+      ],
+      "maxLength": 32
+    },
+    "schemaVersion": {
+      "type": "string",
+      "enum": [
+        "1.0"
+      ]
+    }
+  }
+}

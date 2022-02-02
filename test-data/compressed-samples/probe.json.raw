@@ -1,0 +1,38 @@
+{
+  "events": [
+    {
+      "attributes": {
+        "sessionForegroundDuration": 20923,
+        "sessionDuration": 20923
+      },
+      "eventId": "3F518AB1-4F89-4047-84C8-5E01D7E364F4",
+      "productId": "7900f30b-8f47-4829-95c5-9d4d6e8564ee",
+      "platform": "ios",
+      "name": "session-end",
+      "sessionStartTime": 1641815153605,
+      "appVersion": "12.20",
+      "schemaVersion": "2.0",
+      "customDimensions": {
+        "context.weatherSummary.todayForecast.night.temperature": 14,
+        "viewedDMA": "New York",
+        "context.weatherSummary.observation.feelsLikeTemperature": 20,
+        "physicalDMA": "New York",
+        "viewedWeatherCondition": 31,
+        "physicalState": "NY",
+        "physicalCountry": "US",
+        "physicalWeatherCondition": 31,
+        "launchSource": "clean",
+        "viewedCountry": "US",
+        "contentMode": "normal",
+        "context.weatherSummary.todayForecast.day.temperature": 33,
+        "localSevere": false,
+        "deviceTimeZone": -18000,
+        "viewedState": "NY",
+        "context.weatherSummary.observation.temperature": 31
+      },
+      "sessionId": "E7588C45-D3AB-41C4-A760-716D74FAB250",
+      "eventTime": 1641815174528,
+      "userId": "D924A3CB-477E-4E89-900A-6AB0DAF61835"
+    }
+  ]
+}

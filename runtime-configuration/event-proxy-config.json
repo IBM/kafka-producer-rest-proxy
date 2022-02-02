@@ -1,0 +1,35 @@
+{
+  "maxAge": 7776000000,
+  "eventTimeDeviationRange": 200,
+  "producersConfig": [
+    {
+      "id": "Z2lsLmZ1Y.........dGp5anl0",
+      "name": "Dev iOS Kafka",
+      "slackWebHook": "<SLACK_WEB_HOOK>",
+      "excludeSlackWebHooksEventType": ["EXCLUDED_EVENT_NAME"],
+      "errorEvents": ["<ERROR_EVENT_NAME>"],
+      "type": "kafka",
+      "productName": "sample-product",
+      "environment": "dev",
+      "fullErrorDescription": true,
+      "validationSchemasFolder": "sample-product",
+      "kafkaProducerConfig": {
+        "metadata.broker.list": [
+          "b-2.<MSK_BROKER_ID>.kafka.<REGION>.amazonaws.com:9094",
+          "b-1.<MSK_BROKER_ID>.kafka.<REGION>.amazonaws.com:9094"
+        ],
+        "message.send.max.retries": 10,
+        "retry.backoff.ms": 1000,
+        "compression.codec": "snappy",
+        "linger.ms": 50,
+        "log.connection.close": false,
+        "security.protocol": "ssl",
+        "ssl.ca.location": "kafka_ssl_certs/aws_cert.ca",
+        "socket.keepalive.enable": true
+      },
+      "successTopics": "<SUCCESS_TOPIC_NAME>",
+      "errorTopic": "ERROS_TOPIC_NAME",
+      "partitions": 100
+    }
+  ]
+}

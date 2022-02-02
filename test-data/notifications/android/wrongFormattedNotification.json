@@ -1,0 +1,10 @@
+{
+  "notification": {
+    "data": "ewogICJ2ZXJzaW9uIjogIjEuMCIsCiAgInBhY2thZ2VOYW1lIjogImNvbS53ZWF0aGVyLldlYXRoZXIiLAogICJldmVudFRpbWVNaWxsaXMiOiAiMTU5MTYyODQ1ODg2MiIKfQ==",
+    "messageId": "1237031674302885",
+    "message_id": "1237031674302885",
+    "publishTime": "2020-06-08T15:00:59.191Z",
+    "publish_time": "2020-06-08T15:00:59.191Z"
+  },
+  "subscription": "projects/api-project-385394700893/subscriptions/Airlytics"
+}

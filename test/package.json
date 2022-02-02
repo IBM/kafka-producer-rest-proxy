@@ -1,0 +1,30 @@
+{
+  "name": "node-performance-testing",
+  "version": "1.0.0",
+  "description": "Performance test for your node/express application.",
+  "main": "performanceTest.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha --recursive"
+  },
+  "keywords": [
+    "nodejs",
+    "performance",
+    "testing"
+  ],
+  "author": "Denis Voloshin",
+  "devDependencies": {
+    "should": "^9.0.2",
+    "loadtest": "^1.4.3",
+    "mocha": "^2.5.3"
+  },
+  "dependencies": {
+    "loadtest": "^3.0.9",
+    "mocha": "^6.2.2",
+    "prom-client": "^11.5.3",
+    "should": "^13.2.3",
+    "zlib": "^1.0.5",
+    "uuid": "^3.3.3",
+    "minimist": ">=1.2.2",
+    "csv-reader": "^1.0.6"
+  }
+}
