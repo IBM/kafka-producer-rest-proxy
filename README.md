@@ -1,4 +1,4 @@
-# airlytics-event-proxy
+# kafka-producer-proxy
 JSON schema validation proxy for Kafka producer.
 
 
@@ -33,7 +33,7 @@ The diagram below illustrates the entire flow.
 
 ##### The list of all available response codes
 
-1. HTTP code 200 -  All events were validated successully and are sent to Producer 
+1. HTTP code 200 -  All messages were validated successully and are sent to Producer 
 2. HTTP code 202 -  Indicates that the request was ok, but there's no guarantee everything actually went as it should.
 3. HTTP code 401 -  Provided API key is unauthorized 
 4. HTTP code 400 -  Bad request format 
