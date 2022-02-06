@@ -1,0 +1,15 @@
+{
+  "name": "subscription-notifications",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Denis Voloshin <denusdv@gmail.com>",
+  "license": "MIT",
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "dependencies": {
+    "fastify-plugin": "^3.0.0"
+  }
+}

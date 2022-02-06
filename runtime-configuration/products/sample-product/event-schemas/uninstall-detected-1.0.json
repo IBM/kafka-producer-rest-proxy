@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "userId",
+    "eventId",
+    "eventTime",
+    "attributes",
+    "name",
+    "platform",
+    "productId",
+    "schemaVersion"
+  ],
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "eventId": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+    },
+    "eventTime": {
+      "type": "integer"
+    },
+    "attributes": {
+      "additionalProperties": false
+    },
+    "name": {
+      "type": "string",
+      "enum": [
+        "uninstall-detected"
+      ]
+    },
+    "productId": {
+      "type": "string",
+      "enum": [
+        "bc479db5-ff58-4138-b5e4-a8400a1f78d5",
+        "7900f30b-8f47-4829-95c5-9d4d6e8564ee",
+        "1080dd4e-8fdc-4e39-b6b5-06d880c5b311"
+      ]
+    },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "ios",
+        "android"
+      ],
+      "maxLength": 32
+    },
+    "schemaVersion": {
+      "type": "string",
+      "enum": [
+        "1.0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "events": [
+    {
+      "name": "user-attributes",
+      "userId": "21bc2af5-a14c-4475-a491-0d3d190b2841",
+      "sessionId": "5f8bba5a-d03b-4503-bb05-9ba463199ab1",
+      "eventId": "4aa8bb40-1b5a-11ea-a826-e5b72de0e096",
+      "productId": "bc479db5-ff58-4138-b5e4-a8400a1f78d5",
+      "appVersion": "1.0",
+      "platform": "ios",
+      "eventTime": 1588689151896,
+      "schemaVersion": "5.0",
+      "attributes": {
+        "premiumStartDate": 1688758134620
+      }
+    }
+  ]
+}

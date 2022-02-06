@@ -1,0 +1,163 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "Event Proxy swagger specification",
+    "version": "1.0.0",
+    "title": "Event Proxy swagger specification",
+    "contact": {
+      "email": "denusdv@gmail.com"
+    }
+  },
+  "tags": [
+    {
+      "name": "actions",
+      "description": "Event Proxy API"
+    }
+  ],
+  "paths": {
+    "/eventproxy/track": {
+      "post": {
+        "tags": [
+          "actions"
+        ],
+        "description": "Validate events batch against JSON event-schemas",
+        "summary": "Validate events batch against JSON event-schemas",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "x-api-key",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "header",
+            "name": "x-cloned-event",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          },
+          {
+            "in": "header",
+            "name": "x-current-device-time",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "requestBody": {
+          "description": "The list of events",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "events": {
+                    "type": "array",
+                    "items": {
+                      "type": "object"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Returns OK if events batch against JSON event-schemas complete successfully and sent to Producer queue"
+          },
+          "202": {
+            "description": "Returns the list of events which failed during the validation or sending to Producer queue",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "eventId": {
+                        "type": "string",
+                        "description": "Failed event ID."
+                      },
+                      "shouldRetry": {
+                        "type": "boolean",
+                        "description": "indictates whether an event should be sent again"
+                      },
+                      "error": {
+                        "type": "array",
+                        "description": "error description",
+                        "items": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  },
+                  "example": [
+                    {
+                      "eventId": "4aa8bb42-1b5a-11ea-a826-e5b72de0e096",
+                      "shouldRetry": false,
+                      "error": [
+                        {
+                          "keyword": "required",
+                          "dataPath": ".events[0].attributes",
+                          "schemaPath": "#/properties/events/items/anyOf/0/allOf/1/properties/attributes/required",
+                          "params": {
+                            "missingProperty": "attributes"
+                          },
+                          "notification": "should have required property 'attributes'"
+                        }
+                      ]
+                    },
+                    {
+                      "eventId": "4aa8dbb42-1b5a-11ea-a826-e5b72de0e6d",
+                      "shouldRetry": true,
+                      "error": []
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request format"
+          },
+          "505": {
+            "description": "Fatal server error"
+          }
+        }
+      }
+    },
+    "/eventproxy/about": {
+      "get": {
+        "tags": [
+          "actions"
+        ],
+        "description": "Returns about details",
+        "summary": "Returns about details",
+        "responses": {
+          "200": {
+            "description": " Returns about details",
+            "content": {
+              "application/json": {
+                "configuration": {
+                  "type": "object",
+                  "properties": {
+                    "schema": {
+                      "type": "object"
+                    },
+                    "example": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

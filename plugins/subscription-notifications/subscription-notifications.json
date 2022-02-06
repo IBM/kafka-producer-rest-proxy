@@ -1,0 +1,60 @@
+{
+  "paths": {
+    "/eventproxy/app-store/notification": {
+      "post": {
+        "tags": [
+          "actions"
+        ],
+        "description": "Handles notifications from the App Store",
+        "summary": "Handles notifications from the App Store",
+        "requestBody": {
+          "description": "The Apple Store subscription notification",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Returns 200 to the caller if the request processed successfully"
+          },
+          "500": {
+            "description": "Returns 500 to the caller if the request processed failed"
+          }
+        }
+      }
+    },
+    "/eventproxy/play-store/notification": {
+      "post": {
+        "tags": [
+          "actions"
+        ],
+        "description": "Handles notifications from the Play Store",
+        "summary": "Handles notifications from the Play Store",
+        "requestBody": {
+          "description": "The Play Store subscription notification",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Returns 200 to the caller if the request processed successfully"
+          },
+          "500": {
+            "description": "Returns 500 to the caller if the request processed failed"
+          }
+        }
+      }
+    }
+  }
+}

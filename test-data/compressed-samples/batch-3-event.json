@@ -1,0 +1,77 @@
+{
+  "events": [
+    {
+      "eventTime": 1635342907196,
+      "eventId": "029A676C-ED32-455E-B342-AFE36600BD91",
+      "customDimensions": {
+      },
+      "productId": "7900f30b-8f47-4829-95c5-9d4d6e8564ee",
+      "userId": "F056B5EE-0AD2-4F16-81EC-6FCB009C1C72",
+      "name": "session-start",
+      "sessionId": "89EDEE21-A33C-48C5-95D1-B6AB473B2FDD",
+      "platform": "ios",
+      "sessionStartTime": 1635342907196,
+      "appVersion": "12.10.1",
+      "schemaVersion": "2.0",
+      "attributes": {
+      }
+    },
+    {
+      "userId": "B8CA260E-EE38-422A-A80E-29AF95B94E7D",
+      "customDimensions": {
+      },
+      "schemaVersion": "18.0",
+      "platform": "ios",
+      "appVersion": "12.10.1",
+      "eventTime": 1635342907196,
+      "sessionId": "B5B1905F-B817-4DE3-8477-AA5AE26FE102",
+      "name": "user-attributes",
+      "sessionStartTime": 1635342907196,
+      "previousValues": {
+        "viewedWeatherCondition": 11,
+        "viewedState": "GA",
+        "viewedDMA": "Atlanta"
+      },
+      "eventId": "88BCAB5A-1A52-45B4-809F-E4D44BDA2AE9",
+      "productId": "7900f30b-8f47-4829-95c5-9d4d6e8564ee",
+      "attributes": {
+        "viewedWeatherCondition": 27,
+        "viewedState": "TN",
+        "viewedDMA": "Chattanooga"
+      }
+    },
+    {
+      "name": "page-viewed",
+      "schemaVersion": "3.0",
+      "attributes": {
+        "pageId": "hourly",
+        "source": "tabbedNavigation"
+      },
+      "platform": "ios",
+      "appVersion": "12.10.1",
+      "eventTime": 1635342907196,
+      "sessionId": "24DD65A5-23B3-4CCA-9AF8-092A88879A3E",
+      "userId": "A511DCEF-0BCA-45DE-B80F-970534BD410D",
+      "eventId": "D81F3D10-7B60-45B3-9A9C-6BB64C91C4D1",
+      "customDimensions": {
+        "physicalState": "PA",
+        "context.weatherSummary.todayForecast.day.temperature": null,
+        "physicalDMA": "Philadelphia",
+        "context.weatherSummary.todayForecast.night.temperature": 63,
+        "context.weatherSummary.observation.feelsLikeTemperature": 81,
+        "physicalCountry": "US",
+        "contentMode": "normal",
+        "physicalWeatherCondition": 32,
+        "viewedWeatherCondition": 32,
+        "context.weatherSummary.observation.temperature": 78,
+        "localSevere": false,
+        "viewedDMA": "Philadelphia",
+        "launchSource": "clean",
+        "viewedState": "PA",
+        "viewedCountry": "US"
+      },
+      "sessionStartTime": 1635342907196,
+      "productId": "7900f30b-8f47-4829-95c5-9d4d6e8564ee"
+    }
+  ]
+}
